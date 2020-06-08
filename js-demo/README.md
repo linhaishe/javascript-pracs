@@ -27,6 +27,7 @@ console.log(price) 13
 price++，输出后再运算 12
 ++price,运算后输出 13
 
+use inaccurate floating point numbers
 let price = 1.1+1.3;
 console.log(price)
 //2.4000000000000004
@@ -41,3 +42,10 @@ ${name}`;
 ```
 
 在 web 页面会自动消除空格，但是在 cosolelog 页面会把空格打印出来
+
+But it's agreed among many developers that when we want to wipe out the value of a variable, we use null instead of undefined. That way we can always differentiate between what JavaScript is doing with undefined and what developers are doing with null.
+
+let price = 10;
+price = null;
+
+更好的是使用!== 和 ===
