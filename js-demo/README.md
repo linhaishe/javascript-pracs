@@ -5,3 +5,39 @@
 
 [Xnip2020-06-08_19-53-46.jpg](Xnip2020-06-08_19-53-46.jpg)
 so things like jQuery and Bootstrap and libraries that span the entire project that don't rely on the web page can be placed up here in the head section.
+
+`// single line comment`
+
+<!-- /*
+Detail complex logic...
+Some algorithm.... */ -->
+
+`let price` output undefined
+`const price` output error
+
+声明变量后再使用，否则会报错。用 var 则不会报错，会有问题。尽量用 let/const
+
+let price = 12;
+showMessage(++price) //13
+console.log(price) 13
+
+showMessage(price++) //12
+console.log(price) 13
+
+price++，输出后再运算 12
+++price,运算后输出 13
+
+let price = 1.1+1.3;
+console.log(price)
+//2.4000000000000004
+
+```
+let name = "Jack";
+let message = `hello
+
+
+
+${name}`;
+```
+
+在 web 页面会自动消除空格，但是在 cosolelog 页面会把空格打印出来
