@@ -2,3 +2,6 @@
 - Install light-server locally and save it to your development environment by running `npm install lite-server --save-dev` in your terminal.
 - Run `npm run start` in your terminal to start the server.
 - Your browser will open at `localhost:3000`.
+
+[Xnip2020-06-08_19-53-46.jpg](Xnip2020-06-08_19-53-46.jpg)
+so things like jQuery and Bootstrap and libraries that span the entire project that don't rely on the web page can be placed up here in the head section.
