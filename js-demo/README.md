@@ -49,3 +49,19 @@ let price = 10;
 price = null;
 
 更好的是使用!== 和 ===
+
+```
+const values = ['a','b','c','d','e'];
+
+values.splice(2,1,"hello");
+
+```
+
+values = ['a','b','hello','d','e'];
+
+尽量用一个对象装 global 变量
+
+const app = {
+name :jack,
+age:24
+}
