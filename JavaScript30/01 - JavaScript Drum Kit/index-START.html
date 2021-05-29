@@ -69,6 +69,7 @@
 
         //console.log(audio);
         //stop the function from running all together
+        //如果键盘键格敲击页面中不存在的键盘数，则会返回null,但我们不需要null，所以如果敲击的内容不存在的话我们直接return，拒绝执行和返回任何数据
         if (!audio) return;
 
         //rewind to the start,为了让audio能随着按键次数出声音，而不需要等到音乐播放完成
@@ -81,21 +82,26 @@
         key.classList.add("playing");
 
         //delete class,if use settimeout function will out of sync
+        //如果使用定时器函数会使得操作不同步
+        //使用事件监听函数，当transitionend被检测到，则删除class
       });
 
       function removeTransition(e) {
         //console.log(e);
+        //e事件中会返回所有产生变化的元素,我们只需要一个总的元素,transform即可
         if (e.propertyName !== "transform") return;
         e.target.classList.remove("playing");
 
         //console.log(e);
       }
 
+      //select every single key on the page cuz we want to listen for it on each one
       const keys = document.querySelectorAll(".key");
 
       //it's node list ,not an array ,we need to loop over every single element and attach an event
       //wrong for use addEventListener
       //key.addEventListener("transitionend");
+      //因为是数组，不能在数组集合的情况下直接添加事件，需要将子集循环出来,给每个子集添加事件，所以用foreach fun
 
       keys.forEach((key) =>
         key.addEventListener("transitionend", removeTransition)
